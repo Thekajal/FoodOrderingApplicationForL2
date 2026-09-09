@@ -1,0 +1,235 @@
+.payment-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0 80px;
+  position: relative;
+}
+
+.payment-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.payment-popup {
+  width: min(100%, 460px);
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.payment-popup-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #e8fff0;
+  color: #159447;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.payment-popup h2 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.payment-popup p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.payment-popup-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.payment-popup-actions button {
+  flex: 1;
+}
+
+.payment-card {
+  width: min(100%, 1100px);
+  background: linear-gradient(135deg, var(--bg-soft) 0%, var(--bg-secondary) 55%, var(--bg-primary) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+  padding: 36px;
+}
+
+.payment-header {
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.payment-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.payment-header h1 {
+  font-size: max(2.4vw, 32px);
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.payment-header p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.payment-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.payment-summary,
+.payment-details {
+  background: color-mix(in srgb, var(--bg-secondary) 86%, transparent);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.payment-summary h2,
+.payment-details h2,
+.payment-methods h3 {
+  color: var(--text-primary);
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.payment-total {
+  border-bottom: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.payment-methods {
+  margin-top: 28px;
+}
+
+.payment-method-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.payment-method-list span {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.detail-block {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-block:last-of-type {
+  border-bottom: none;
+}
+
+.detail-block span {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.detail-block strong {
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.payment-actions button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-button {
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+}
+
+.primary-button {
+  background: var(--accent-color);
+  color: white;
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 12px;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .payment-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .payment-page {
+    padding: 24px 0 60px;
+  }
+
+  .payment-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .payment-actions {
+    flex-direction: column;
+  }
+
+  .payment-popup {
+    padding: 26px 18px;
+    border-radius: 18px;
+  }
+
+  .payment-popup-actions {
+    flex-direction: column;
+  }
+}

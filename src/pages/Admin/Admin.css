@@ -1,0 +1,198 @@
+.admin-page {
+  min-height: 80vh;
+  padding: 36px 0 80px;
+}
+
+.admin-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 14%, var(--bg-secondary)), var(--bg-secondary));
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 28px 32px;
+  box-shadow: var(--card-shadow);
+}
+
+.admin-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.admin-hero h1,
+.admin-empty-state h2,
+.admin-order-card h2 {
+  color: var(--text-primary);
+}
+
+.admin-hero p,
+.admin-empty-state p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.admin-summary {
+  min-width: 180px;
+  padding: 22px;
+  border-radius: 24px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.admin-summary strong {
+  display: block;
+  font-size: 40px;
+  color: var(--text-primary);
+}
+
+.admin-summary span,
+.admin-order-label,
+.admin-order-meta span,
+.admin-status-controls p {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+
+.admin-empty-state,
+.admin-order-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.admin-empty-state {
+  padding: 32px;
+}
+
+.admin-demo-credentials {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-demo-credentials span {
+  padding: 10px 14px;
+  background: var(--bg-soft);
+  border-radius: 999px;
+  color: var(--text-primary);
+}
+
+.admin-orders-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.admin-order-card {
+  padding: 26px;
+}
+
+.admin-order-header,
+.admin-order-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-order-header {
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.admin-order-status {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color) 14%, var(--bg-secondary));
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.admin-order-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.admin-order-meta strong,
+.admin-order-item {
+  color: var(--text-primary);
+}
+
+.admin-order-items,
+.admin-status-controls {
+  border-top: 1px solid var(--border-color);
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+.admin-order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-status-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.admin-status-buttons button {
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-status-buttons button.active,
+.admin-status-buttons button:hover {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .admin-hero,
+  .admin-order-header {
+    flex-direction: column;
+  }
+
+  .admin-order-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-page {
+    padding: 24px 0 60px;
+  }
+
+  .admin-hero,
+  .admin-empty-state,
+  .admin-order-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .admin-order-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-order-item {
+    flex-direction: column;
+  }
+}
